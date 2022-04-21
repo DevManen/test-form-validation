@@ -2,9 +2,9 @@
 
 This is a minimal reproduction case of the post-submit form validation issue with Doctrine configured with a cache pool (Memcached or Redis).
 
-![screenshot](https://github.com/DevManen/test-form-validation/raw/master/screenshot.png "Screenshot of the Web Profiler")
+![screenshot](https://raw.githubusercontent.com/DevManen/test-form-validation/main/screenshot.png "Screenshot of the Web Profiler")
 
-# Steps of reproduction
+## Steps of reproduction
 
 1) ```composer create-project symfony/skeleton test-form-validation "5.4.*"```
 2) ```cd test-form-validation```
@@ -19,7 +19,7 @@ This is a minimal reproduction case of the post-submit form validation issue wit
 11) Go to [http://127.0.0.1:8000]() and submit the form
 12) Check the **Cache** section of the [**Web Profiler**](http://127.0.0.1:8000/_profiler)
 
-# Stack trace from a cache `_MemcachedAdapter->fetch()_` call at form submittion
+## Stack trace from a cache `_MemcachedAdapter->fetch()_` call at form submittion
 
 ```
 #0 vendor\symfony\cache\Traits\AbstractAdapterTrait.php(224): Symfony\Component\Cache\Adapter\MemcachedAdapter->doFetch(Array)
