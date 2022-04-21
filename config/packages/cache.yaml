@@ -1,0 +1,11 @@
+framework:
+    cache:
+        default_memcached_provider: 'memcached://127.0.0.1'
+
+        app: cache.adapter.filesystem
+        system: cache.adapter.system
+
+        pools:
+
+            cache.pool.memcached:
+                adapter: cache.adapter.memcached

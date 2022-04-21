@@ -1,0 +1,11 @@
+root_base_path:
+    path:               '/'
+    controller:         Symfony\Bundle\FrameworkBundle\Controller\RedirectController
+    defaults:
+        path:           '/thing/'
+        permanent:      true
+
+when@dev:
+    _errors:
+        resource: '@FrameworkBundle/Resources/config/routing/errors.xml'
+        prefix: /_error

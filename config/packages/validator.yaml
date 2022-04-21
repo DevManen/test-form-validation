@@ -1,0 +1,5 @@
+framework:
+    validation:
+        enable_annotations:         true
+        email_validation_mode:      html5
+        cache:                      cache.adapter.memcached

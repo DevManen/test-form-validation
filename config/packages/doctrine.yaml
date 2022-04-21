@@ -1,0 +1,42 @@
+doctrine:
+    dbal:
+        default_connection:             default
+        connections:
+
+            default:
+                driver:                             '%env(DB_APP_DRIVER)%'
+                host:                               '%env(DB_APP_HOST)%'
+                port:                               '%env(DB_APP_PORT)%'
+                dbname:                             '%env(DB_APP_NAME)%'
+                user:                               '%env(DB_APP_USER)%'
+                password:                           '%env(DB_APP_PWD)%'
+                server_version:                     '%env(DB_APP_VERSION)%'
+                profiling_collect_backtrace:        '%kernel.debug%'
+                profiling_collect_schema_errors:    '%kernel.debug%'
+                charset:                             UTF8
+
+    orm:
+        default_entity_manager:         default
+        auto_generate_proxy_classes:    '%kernel.debug%'
+        proxy_namespace:                Proxies
+        entity_managers:
+
+            default:
+                connection:             default
+                metadata_cache_driver:
+                    type:               pool
+                    pool:               cache.pool.memcached
+                query_cache_driver:
+                    type:               pool
+                    pool:               cache.pool.memcached
+                result_cache_driver:
+                    type:               pool
+                    pool:               cache.pool.memcached
+                mappings:
+
+                    App:
+                        is_bundle:      false
+                        type:           annotation
+                        dir:            '%kernel.project_dir%/src/Entity'
+                        prefix:         'App\Entity'
+                        alias:          App
