@@ -2,7 +2,7 @@
 
 This is a minimal reproduction case of the post-submit form validation issue with Doctrine configured with a cache pool (Memcached or Redis).
 
-![screenshot](https://github.com/DevManen/test-form-validation/raw/master/profiler_cache.png "Screenshot of the Web Profiler")
+![screenshot](https://raw.githubusercontent.com/DevManen/test-form-validation/main/profiler_cache.png "Screenshot of the Web Profiler")
 
 # Steps of reproduction
 
